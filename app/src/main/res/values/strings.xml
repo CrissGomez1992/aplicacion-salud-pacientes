@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">aplicacionSaludPcientes</string>
+    <string name="hint_busqueda">NUHSA o nombre</string>
+    <string name="titulo_buscar_por">Buscar por</string>
+    <string name="buscar_por_nuhsa">NUHSA</string>
+    <string name="buscar_por_nombre">Nombre</string>
+    <string name="busqueda_vacia">Escribe un NUHSA o un nombre</string>
+    <string name="btn_ver_listado">Ver listado</string>
+    <string name="titulo_listado">Listado de pacientes</string>
+    <string name="sin_resultados">No hay pacientes que mostrar</string>
+    <string name="titulo_resultados">Resultados de la búsqueda</string>
+    <string name="etiqueta_nuhsa">NUHSA: %1$s</string>
+    <string name="opcion_editar">Editar</string>
+    <string name="opcion_eliminar">Eliminar</string>
+    <string name="titulo_editar">Editar paciente</string>
+    <string name="titulo_eliminar">Eliminar paciente</string>
+    <string name="mensaje_eliminar">¿Eliminar a %1$s? Esta acción no se puede deshacer.</string>
+    <string name="hint_nombre_campo">Nombre</string>
+    <string name="hint_apellidos">Apellidos</string>
+    <string name="titulo_app">Salud Pacientes</string>
+    <string name="desc_logo">Logo de la aplicación</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="titulo_paciente_creado">Paciente creado</string>
+    <string name="mensaje_paciente_creado">Nombre: %1$s\nApellidos: %2$s\nGrupo sanguíneo: %3$s\nNUHSA: %4$s</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="campos_vacios">Nombre y apellidos son obligatorios</string>
+    <string name="paciente_eliminado">Paciente eliminado</string>
+    <string name="paciente_actualizado">Paciente actualizado</string>
+    <string name="error_operacion">No se pudo completar la operación</string>
 </resources>

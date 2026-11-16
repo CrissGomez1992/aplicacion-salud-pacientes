@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLista"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ListaActivity">
+
+    <!-- fitsSystemWindows (arriba): deja espacio para la barra de estado, asi el titulo no queda debajo -->
+
+    <!-- Titulo: "Listado de pacientes"; en una busqueda ListaActivity lo cambia a "Resultados de la busqueda" -->
+    <TextView
+        android:id="@+id/tvTituloLista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/titulo_listado"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Lista de tarjetas de pacientes. LinearLayoutManager las coloca una debajo de otra.
+         width/height 0dp: ocupa todo el espacio entre el titulo y el final de la pantalla.
+         clipToPadding false: al hacer scroll las tarjetas se ven tambien dentro del padding -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPacientes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloLista" />
+
+    <!-- Mensaje "No hay pacientes que mostrar", centrado. Empieza oculto (gone) y
+         ListaActivity lo muestra cuando no hay resultados -->
+    <TextView
+        android:id="@+id/tvVacio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sin_resultados"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

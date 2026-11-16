@@ -10,7 +10,9 @@ constraintlayout = "2.2.2"
 firebaseDatabase = "23.0.0"
 googleServices = "4.4.4"
 
+recyclerview = "1.4.0"
 [libraries]
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
